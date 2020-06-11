@@ -21,8 +21,8 @@ Ext.define('CityApp.Application', {
     stsCtrl: null,
     txpCtrl: null,
 
-    cityName: 'Enschede',
-    cityCoords: [258200,471600], /* Coordinates of a central point in Enschede EPSG:28992 */
+    cityName: 'Delft',
+    cityCoords: [84430,446385], /* Coordinates of a central point in Enschede EPSG:28992 */
     
     launch: function(){
 

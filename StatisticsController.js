@@ -67,14 +67,14 @@ Ext.define('CityApp.view.statistics.StatisticsController', {
 
         this.stsMap = CityApp.app.homeCtrl.createMap('brtachtergrondkaartgrijs', 'sts_map_panel');
         this.stsMap.getView().setCenter(CityApp.app.cityCoords);
-        this.stsMap.getView().setZoom(6);
+        this.stsMap.getView().setZoom(8);
 
         var Boundary = new ol.layer.Image({
             source: new ol.source.ImageWMS({
                 url: 'https://gisedu.itc.utwente.nl/cgi-bin/mapserv.exe?',
                 params: {
                     'MAP': 'd:/iishome/student/s2064774/Map/Delft.map',
-                    'LAYERS': 'boundary_e',
+                    'LAYERS': 'boundary',
                     'SERVER': 'MapServer',
                     'TILED': true
                 }
@@ -87,7 +87,7 @@ Ext.define('CityApp.view.statistics.StatisticsController', {
             source: new ol.source.ImageWMS({
                 url: 'https://gisedu.itc.utwente.nl/cgi-bin/mapserv.exe?',
                 params: {
-                    'MAP': 'd:/iishome/student/s2064774/CityAppEnschede/app/api/adminboundaries.map',
+                    'MAP': 'd:/iishome/student/s2064774/CityApp1/app/api/adminboundaries.map',
                     'LAYERS': 'districts',
                     'SERVER': 'MapServer',
                     'TILED': true
@@ -138,9 +138,9 @@ Ext.define('CityApp.view.statistics.StatisticsController', {
     renderVectorFeatures: function(){
 
     	var featuresUrl = 'https://gisedu.itc.utwente.nl/cgi-bin/mapserv.exe?map='+
-         'd:/iishome/student/s2257335/CityAppEnschede/app/api/adminboundaries.map'+
+         'd:/iishome/student/s2064774/CityApp1/app/api/adminboundaries.map'+
          '&service=WFS&version=1.1.0&request=GetFeature&typename=cbs:districts'+
-         '&outputFormat=geojson&srsname=EPSG:28992&cityname=Enschede';
+         '&outputFormat=geojson&srsname=EPSG:28992&cityname=Delft';
             
         this.defaultStyle = new ol.style.Style({
             fill: new ol.style.Fill({

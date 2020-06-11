@@ -36,7 +36,7 @@ records_query.execute("""
                round(l.use_m2::NUMERIC,2),
                round((l.use_m2 * 100 / (cp.area_km2 * 1000000))::NUMERIC,2)
            )) AS landuse_2012
-    FROM cp LEFT JOIN s2257335.landuse_per_district as l 
+    FROM cp LEFT JOIN s2064774.landuse_per_district as l 
          ON (l.wk_code = cp.code) AND ('g' || l.group_2012 = cp.group)
     GROUP BY 1,2,3,4,5;
 """ % (cityName))
